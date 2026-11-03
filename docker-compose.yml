@@ -1,0 +1,13 @@
+services:
+  hap-files-db:
+    container_name: hap_files_database
+    image: postgres:18-alpine
+    volumes:
+      - "./datadb:/var/lib/postgresql"
+    ports:
+      - ${HAP_FILES_DB_PORT}:5432
+    environment:
+      - POSTGRES_USER=${HAP_FILES_DB_USER}
+      - POSTGRES_PASSWORD=${HAP_FILES_DB_PASSWORD}
+      - POSTGRES_DB=${HAP_FILES_DB_NAME}
+  
