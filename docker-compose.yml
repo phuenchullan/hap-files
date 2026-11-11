@@ -3,7 +3,7 @@ services:
     container_name: hap_files_database
     image: postgres:18-alpine
     volumes:
-      - "./datadb:/var/lib/postgresql"
+      - "./data/hap-files:/var/lib/postgresql"
     ports:
       - ${HAP_FILES_DB_PORT}:5432
     environment:
