@@ -2,6 +2,3 @@ target
 .git
 .env
 *.md
-datadb
-data
-images
